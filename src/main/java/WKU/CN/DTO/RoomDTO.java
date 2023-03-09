@@ -8,7 +8,7 @@ import lombok.Setter;
 public class RoomDTO {
 
     private Long rid;
-    private String rName;
+    private String rname;
     private String location;
-    private String sName;
+    private String sname;
 }

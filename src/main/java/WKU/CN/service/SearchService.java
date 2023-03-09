@@ -37,7 +37,7 @@ public class SearchService {
     public List<RoomDTO> roomList(String sName){
 
         List<RoomDTO> result = new ArrayList<>();
-        List<Room> roomList = roomRepository.findAllBySName(sName);
+        List<Room> roomList = roomRepository.findBySname(sName);
 
         for(int i=0;i<roomList.size();i++){
 

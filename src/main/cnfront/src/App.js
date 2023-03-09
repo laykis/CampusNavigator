@@ -1,33 +1,20 @@
-import React, {useState, useEffect} from "react"
-import axios from 'axios'
+import React, {useState, useEffect} from 'react';
+import Search from "./components/Search";
 import './App.css';
 
-function App() {
+function App () {
+    const [message, setMessage] = useState("");
 
-  const [ testStr, setTestStr ] = useState('');
-  function callback(str) {
-    setTestStr(str);
-  }
-
-  // 첫 번째 렌더링을 마친 후 실행
-  useEffect(
-      () => {
-        axios({
-          url: '/home',
-          method: 'GET'
-        }).then((res) => {
-          callback(res.data);
-        })
-      }, []
-  );
-
-  return (
-      <div className="App">
-        <header className="App-header">
-          {testStr}
-        </header>
-      </div>
-  );
+    useEffect(() => {
+        fetch('/hello')
+            .then(response => response.text())
+            .then(message => {
+                setMessage(message);
+            });
+    },[])
+    return (
+        Search()
+    )
 }
 
 export default App;

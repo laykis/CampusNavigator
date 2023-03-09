@@ -20,18 +20,18 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long rid;
 
-    private String rName;
+    private String rname;
     private String location;
-    private String sName;
+    private String sname;
 
     public static class Builder{
 
-        private String rName;
+        private String rname;
         private String location;
-        private String sName;
+        private String sname;
 
-        public Builder rName(String rName){
-            this.rName = rName;
+        public Builder rname(String rname){
+            this.rname = rname;
             return this;
         }
 
@@ -40,8 +40,8 @@ public class Room {
             return this;
         }
 
-        public Builder sName(String sName){
-            this.sName = sName;
+        public Builder sname(String sname){
+            this.sname = sname;
             return this;
         }
 
@@ -51,9 +51,9 @@ public class Room {
     }
 
     public Room(Builder builder){
-        this.rName = builder.rName;
+        this.rname = builder.rname;
         this.location = builder.location;
-        this.sName = builder.sName;
+        this.sname = builder.sname;
     }
 
     public RoomDTO convert(Room room){
@@ -61,9 +61,9 @@ public class Room {
         RoomDTO result = new RoomDTO();
 
         result.setRid(room.getRid());
-        result.setRName(room.getRName());
+        result.setRname(room.getRname());
         result.setLocation(room.getLocation());
-        result.setSName(room.getSName());
+        result.setSname(room.getSname());
 
         return result;
 
