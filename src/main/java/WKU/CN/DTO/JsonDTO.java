@@ -7,6 +7,6 @@ import lombok.Setter;
 @Setter
 public class JsonDTO {
 
-    private String search;
+    private Long id;
     private String searchResult;
 }
