@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import "../css/Search.css";
 import axios from 'axios';
-import SearchList from "./SearchList";
+import Cmap from "./Cmap";
+
 
 const Search = () => {
 
     const [ search, setSearch ] = useState('')
     const [ searchList, setSearchList ] = useState([''])
+
 
     const searchChange = (e) => {
         setSearch(e.target.value)
@@ -15,6 +17,8 @@ const Search = () => {
     const searchListChange = (e) => {
         setSearchList(e)
     }
+
+
 
     const onClickSearch = () => {
 
@@ -36,8 +40,9 @@ const Search = () => {
                 <input className="input" type="search" placeholder="원광대학교 건물 이름을 입력하세요" onChange={searchChange}>
                 </input>
                 <button className="button mt-4" onClick={onClickSearch}>검색</button>
-                <h1>SearchList</h1>
-                <SearchList searchList={searchList}/>
+                <Cmap searchList={searchList}/>
+
+
             </div>
 
 

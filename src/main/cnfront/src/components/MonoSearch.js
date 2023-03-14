@@ -1,7 +1,21 @@
-function MonoSearch({ searchList }) {
+import React from "react";
+
+
+
+
+function MonoSearch (props)  {
+
+
+
+    const onClickMap = () => {
+
+        props.changeMap(props.searchList.searchResult)
+    }
+
+
     return (
         <div>
-            <a href={"/" + searchList.searchResult}> {searchList.searchResult} </a>
+            <button onClick={onClickMap}> {props.searchList.searchResult} </button>
         </div>
     );
 }
