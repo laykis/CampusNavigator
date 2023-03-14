@@ -19,14 +19,20 @@ public class Structures {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long sid;
 
-    private String sName;
+    private String sname;
 
     public static class Builder{
 
-        private String sName;
+        private Long sid;
+        private String sname;
 
-        public Builder sName(String sName){
-            this.sName = sName;
+        public Builder sid(Long sid){
+            this.sid = sid;
+            return this;
+        }
+
+        public Builder sname(String sname){
+            this.sname = sname;
             return this;
         }
 
@@ -36,7 +42,10 @@ public class Structures {
     }
 
     public Structures(Builder builder){
-        this.sName = builder.sName;
+
+        this.sid = builder.sid;
+        this.sname = builder.sname;
+
     }
 
     public StructureDTO convert(Structures structures){
@@ -44,7 +53,7 @@ public class Structures {
         StructureDTO result = new StructureDTO();
 
         result.setSid(structures.getSid());
-        result.setSName(structures.getSName());
+        result.setSname(structures.getSname());
 
         return result;
 
@@ -54,9 +63,36 @@ public class Structures {
 
         List<StructureDTO> result = new ArrayList<>();
 
+
         for(int i = 0;i< structures.size();i++){
 
-            result.set(i, convert(structures.get(i)));
+            result.add(i, convert(structures.get(i)));
+
+        }
+
+        return result;
+
+    }
+
+    public void changeSname (String sname){
+        this.sname = sname;
+
+    }
+
+    public void changeSid (Long sid){
+        this.sid = sid;
+    }
+    public List<Structures> arrayInit(int size){
+
+        Structures structures = new Structures();
+        structures.changeSname("");
+        structures.changeSid(0L);
+
+        List<Structures> result = new ArrayList<>();
+
+        for(int i = 0; i < size; i++ ){
+
+            result.add(i , structures);
         }
 
         return result;

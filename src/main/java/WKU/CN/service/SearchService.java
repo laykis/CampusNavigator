@@ -17,17 +17,12 @@ public class SearchService {
     private final StructuresRepository structuresRepository;
 
 
-    public List<String> structuresList(String search){
+    public List<StructureDTO> structuresList(String search){
 
-        List<String> result = new ArrayList<>();
-        List<Structures> st = structuresRepository.findBySNameContaining(search);
+        Structures sInit = new Structures();
+        List<Structures> st = structuresRepository.findBySnameContaining(search.trim());
+        List<StructureDTO> result = sInit.convertList(st);
 
-        for(int i = 0;i < st.size(); i++){
-
-            result.set(i, st.get(i).getSName());
-        }
-
-        System.out.println(st.get(0).getSName()g);
         return result;
 
     }

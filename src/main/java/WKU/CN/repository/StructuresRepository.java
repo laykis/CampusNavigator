@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface StructuresRepository extends JpaRepository<Structures, Long> {
 
-    List<Structures> findBySNameContaining(String SName);
+    List<Structures> findBySnameContaining(String sname);
 }
