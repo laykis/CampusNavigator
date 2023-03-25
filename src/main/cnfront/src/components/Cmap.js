@@ -1,5 +1,6 @@
 import MonoSearch from "./MonoSearch";
 import React, {useState} from "react";
+import "../css/Cmap.css";
 
 
 
@@ -15,16 +16,25 @@ const Cmap = ({searchList}) => {
     }
 
     return(
-        <div>
-            <h1>SearchList</h1>
-            {searchList && searchList.map((sList) =>
-                <MonoSearch changeMap = {changeMap} searchList={sList} key = {sList.id}/>)}
-            <img src={require("../img/" +viewMapName)} alt={viewMapName}/>
+        <div className='box'>
+            <div className='list'>
+
+                <p className='search'>검색결과</p>
+                {searchList && searchList.map((sList) =>
+                    <MonoSearch changeMap = {changeMap} searchList={sList} key = {sList.id}/>)}
+            </div>
+
+            <div className='photo'>
+
+                <img className='map' src={require("../img/" +viewMapName)} alt={viewMapName}/>
+            </div>
+
         </div>
+
+
     );
 
 
 
 }
-
 export default Cmap

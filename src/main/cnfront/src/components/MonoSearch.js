@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../css/MonoSearch.css";
 
 
 
@@ -15,7 +15,7 @@ function MonoSearch (props)  {
 
     return (
         <div>
-            <button onClick={onClickMap}> {props.searchList.searchResult} </button>
+            <button className="list_bt" onClick={onClickMap}> {props.searchList.searchResult} </button>
         </div>
     );
 }

@@ -1,12 +1,10 @@
 package WKU.CN.service;
 
 import WKU.CN.DTO.StructureDTO;
-
 import WKU.CN.entity.Structures;
 import WKU.CN.repository.StructuresRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +13,6 @@ import java.util.List;
 public class SearchService {
 
     private final StructuresRepository structuresRepository;
-
 
     public List<StructureDTO> structuresList(String search){
 
@@ -26,6 +23,7 @@ public class SearchService {
         return result;
 
     }
+
 
 
 }

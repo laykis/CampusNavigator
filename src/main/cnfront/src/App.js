@@ -1,21 +1,26 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Search from "./components/Search";
+import Main from "./components/Main";
+import NotFound from "./components/NotFound";
 import './App.css';
+import RouteSearch from "./components/RouteSearch";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
 
 function App () {
-    const [message, setMessage] = useState("");
 
-    useEffect(() => {
-        fetch('/hello')
-            .then(response => response.text())
-            .then(message => {
-                setMessage(message);
-            });
-    },[])
     return (
-        Search()
-
-    )
+        <div className='App'>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Main/>}/>
+                    <Route path="/search" element={<Search/>}/>
+                    <Route path="/routesearch" element={<RouteSearch/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;

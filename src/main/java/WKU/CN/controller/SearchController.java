@@ -4,7 +4,6 @@ import WKU.CN.DTO.JsonDTO;
 import WKU.CN.DTO.StructureDTO;
 import WKU.CN.service.SearchService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,4 +31,5 @@ public class SearchController {
 
         return result;
     }
+
 }

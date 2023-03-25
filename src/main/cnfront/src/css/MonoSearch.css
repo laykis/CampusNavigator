@@ -1,0 +1,19 @@
+.list_bt{
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
+    color: #232a6b;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    margin-bottom: 2px;
+    border: none;
+
+}
+
+.list_bt:hover{
+    background-color: #232a6b;
+    color: white;
+}

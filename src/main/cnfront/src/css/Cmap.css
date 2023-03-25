@@ -1,0 +1,53 @@
+.search {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    padding-top: 7px;
+}
+
+.list{
+    margin-left: 20px;
+    margin-bottom: 5px;
+
+    float: left;
+}
+
+.map {
+
+    border-left: 1px solid gray;
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+}
+
+.photo{
+
+    float: right;
+}
+
+.box{
+    /*border-top: 1px solid gray;
+    margin-top: 10px;*/
+
+    max-width: 1500px;
+    padding: 1em 1em;
+    margin:0 auto 5px;
+    background-color: white;
+    /*border: 1px solid white;*/
+    /*border-radius: 5px;*/
+}
+
+.btn{
+    width: 80px;
+    margin-left: 5px;
+    height: 30px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    text-align: center;
+    margin-top: 0px;
+    background-color: rgb(178, 183, 234);
+}
