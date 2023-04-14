@@ -32,10 +32,8 @@
 
 ---
 
-<img width="1505" alt="캠퍼스 네비" src="https://user-images.githubusercontent.com/73100987/231956380-b962dd92-53a8-4f39-b18c-278562287d9
+<img width="1505" alt="캠퍼스 네비" src="https://user-images.githubusercontent.com/73100987/231956380-b962dd92-53a8-4f39-b18c-278562287d9a.png">
 <img width="1364" alt="강의실 찾기" src="https://user-images.githubusercontent.com/73100987/231956425-865be12d-9c0d-44f1-8372-3b7246882e87.png">
-a.png">
-
 
 ---
 
